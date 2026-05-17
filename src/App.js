@@ -87,11 +87,20 @@ const achievements = [
 function useInView(threshold = 0.15) {
   const ref = useRef(null);
   const [visible, setVisible] = useState(false);
+
   useEffect(() => {
-    const obs = new IntersectionObserver(([e]) => { if (e.isIntersecting) setVisible(true); }, { threshold });
+    const obs = new IntersectionObserver(
+      ([e]) => {
+        if (e.isIntersecting) setVisible(true);
+      },
+      { threshold }
+    );
+
     if (ref.current) obs.observe(ref.current);
+
     return () => obs.disconnect();
-  }, []);
+  }, [threshold]);
+
   return [ref, visible];
 }
 
@@ -128,8 +137,8 @@ function AnimatedSection({ children, delay = 0 }) {
 
 export default function Portfolio() {
   const [activeNav, setActiveNav] = useState("hero");
-  const [menuOpen, setMenuOpen] = useState(false);
   const [typedText, setTypedText] = useState("");
+  const [menuOpen, setMenuOpen] = useState(false);
   const roles = ["Full Stack Developer", "MERN Stack Engineer", "Competitive Programmer", "AI Integrations Builder"];
   const [roleIdx, setRoleIdx] = useState(0);
   const [charIdx, setCharIdx] = useState(0);
@@ -153,7 +162,7 @@ export default function Portfolio() {
       }
     }, deleting ? 40 : 70);
     return () => clearTimeout(timeout);
-  }, [charIdx, deleting, roleIdx]);
+}, [charIdx, deleting, roleIdx, roles]);
 
   useEffect(() => {
     const handleScroll = () => {
