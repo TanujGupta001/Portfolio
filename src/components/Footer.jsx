@@ -47,7 +47,7 @@ export default function Footer() {
         ))}
       </div>
       <span className="mono">
-        // Designed & built by{" "}
+        {"// Designed & built by "}{" "}
         <span style={{ color: accent }}>Tanuj Gupta</span> · {new Date().getFullYear()}
       </span>
     </div>

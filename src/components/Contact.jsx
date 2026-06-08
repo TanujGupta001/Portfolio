@@ -1,8 +1,6 @@
-import { socialLinks, theme } from "../data";
+import { socialLinks } from "../data";
 import { Section, AnimatedSection, SectionHeader } from "./UI";
 import ContactForm from "./ContactForm";
-
-const { accent } = theme;
 
 export default function Contact() {
   return (

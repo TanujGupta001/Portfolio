@@ -1,7 +1,4 @@
 import { useState } from "react";
-import { theme } from "../data";
-
-const { accent } = theme;
 
 export default function ContactForm() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });

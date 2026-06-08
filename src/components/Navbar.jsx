@@ -1,8 +1,6 @@
-import { theme, navLinks } from "../data";
+import { navLinks } from "../data";
 import { useActiveNav } from "../hooks";
 import { scrollTo } from "../utils";
-
-const { accent } = theme;
 
 export default function Navbar() {
   const activeNav = useActiveNav();

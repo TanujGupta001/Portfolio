@@ -1,7 +1,4 @@
-import { theme } from "../data";
 import { Section, AnimatedSection, SectionHeader } from "./UI";
-
-const { accent } = theme;
 
 const infoCards = [
   ["🎓", "B.Tech CSE (IoT)", "SKIT Jaipur, 2027"],
