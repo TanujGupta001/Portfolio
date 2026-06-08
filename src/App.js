@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 
 const skills = {
   Languages: ["C++", "JavaScript", "Python", "SQL", "HTML5", "CSS3"],
-  Frontend: ["React.js", "Redux Toolkit", "TailwindCSS", "Bootstrap"],
+  Frontend: ["React.js", "Redux Toolkit","NextJS", "TailwindCSS", "Bootstrap"],
   "Backend / APIs": ["Node.js", "Express.js", "RESTful APIs", "WebSockets", "JWT"],
   Databases: ["MongoDB", "MySQL"],
   Tools: ["Git", "GitHub", "Postman", "OpenAI API", "Cloudinary", "Vercel", "Render"],
@@ -220,7 +220,7 @@ export default function Portfolio() {
       {/* NAV */}
       <nav style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 100, background: "#0a0a0fcc", backdropFilter: "blur(12px)", borderBottom: "1px solid #ffffff0a", padding: "16px 24px", display: "flex", alignItems: "center", justifyContent: "space-between", maxWidth: "100%", }}>
         <div style={{ fontWeight: 800, fontSize: 18, letterSpacing: "-0.02em" }}>
-          <span className="gradient-text">TG</span>
+          <span className="gradient-text">Tanuj Gupta</span>
         </div>
         <div style={{ display: "flex", gap: 28, alignItems: "center" }}>
           {navLinks.map(l => (
@@ -488,7 +488,6 @@ export default function Portfolio() {
                 { label: "tanuj131124@gmail.com", href: "mailto:tanuj131124@gmail.com", icon: "📧" },
                 { label: "GitHub", href: "https://github.com/TanujGupta001", icon: "💻" },
                 { label: "LinkedIn", href: "https://www.linkedin.com/in/tanuj-gupta-2bbb132b9/", icon: "🔗" },
-                { label: "+91 9588250793", href: "tel:+919588250793", icon: "📞" },
               ].map(l => (
                 <a key={l.label} href={l.href} target="_blank" rel="noreferrer">
                   <div style={{ display: "flex", alignItems: "center", gap: 8, padding: "12px 20px", background: "#131320", border: "1px solid #ffffff18", borderRadius: 12, fontSize: 14, fontWeight: 600, color: "#ccc", transition: "all 0.2s", cursor: "pointer" }}>
